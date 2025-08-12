@@ -126,7 +126,6 @@ This repository contains three main parts:
 project-root/
 │
 ├── agent/                     # Main backend service (Node.js/Express)
-├── frontend/                  # Next.js frontend
 └── servers/
     └── spurtcommerce/         # MCP server (@spurtcommerce/mcp)
 ```
@@ -138,12 +137,6 @@ project-root/
 **Backend (agent):**
 ```bash
 cd agent
-npm install
-```
-
-**Frontend (Next.js):**
-```bash
-cd frontend
 npm install
 ```
 
@@ -163,11 +156,6 @@ ANTHROPIC_API_KEY=your_api_key
 SOCKET_PORT=3001
 # Optional: Directly point to built MCP server
 MCP_SERVER_PATH=servers/spurtcommerce/dist/index.js
-```
-
-**Frontend (`frontend/.env.local`):**
-```env
-NEXT_PUBLIC_SOCKET_PORT=3001
 ```
 
 ---
@@ -195,10 +183,4 @@ node $(pwd)/dist/index.js
 ```bash
 cd agent
 npm start
-```
-
-**Start frontend:**
-```bash
-cd frontend
-npm run dev
 ```
